@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭샷매치 정산 계산기</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>드롭샷매치 정산 계산기 🧮</h1>
+
+        <div class="form-group">
+            <label>계약 형태</label>
+            <div class="toggle-switch">
+                <input type="radio" id="contract-3party" name="contract-type" value="3party" checked>
+                <label for="contract-3party">삼자계약</label>
+                <input type="radio" id="contract-2party" name="contract-type" value="2party">
+                <label for="contract-2party">양자계약</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="client-type">고객사 유형</label>
+            <select id="client-type">
+                <option value="corporate">법인(일반)</option>
+                <option value="tax-exempt">면세</option>
+                <option value="simplified">간이과세자</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>중개사</label>
+            <div id="intermediary" class="static-field">드롭샷매치</div>
+        </div>
+
+        <div class="form-group">
+            <label for="producer-type">제작사 유형</label>
+            <select id="producer-type">
+                <option value="corporate">법인(일반)</option>
+                <option value="freelancer">프리랜서</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="contract-amount">계약대금 (원)</label>
+            <input type="number" id="contract-amount" placeholder="※VAT포함 금액으로 입력해주세요">
+        </div>
+
+        <div class="form-group result-group">
+            <label for="final-amount">최종 정산액 (제작사 지급액)</label>
+            <div id="final-amount" class="static-field result-field"></div>
+        </div>
+    </div>
+
+</body>
+</html>
